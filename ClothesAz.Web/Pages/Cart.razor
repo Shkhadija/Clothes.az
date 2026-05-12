@@ -1,0 +1,6 @@
+@page "/cart"
+@inject ApiService Api
+@inject AuthService Auth
+<h1>Səbət</h1>
+@if(lines.Count==0){<div class="cardx">Səbət boşdur.</div>} else {<div class="cart-list">@foreach(var l in lines){<div class="cart-line"><img src="@l.Product?.ImageUrl"/><div><b>@l.Product?.Name</b><p>@l.Quantity ədəd · @l.LineTotal ₼</p></div><button @onclick="()=>Remove(l.Id)">Sil</button></div>}</div><h2>Cəmi: @lines.Sum(x=>x.LineTotal) ₼</h2><input placeholder="Çatdırılma ünvanı" @bind="address"/><button class="primary" @onclick="Checkout">Sifarişi tamamla</button>}
+@code{List<CartLine> lines=new(); string address="Bakı"; protected override async Task OnInitializedAsync(){await Auth.InitAsync(); await Load();} async Task Load(){lines=await Api.GetAsync<List<CartLine>>($"api/Cart/{(Auth.UserId==0?1:Auth.UserId)}")??new();} async Task Remove(int id){await Api.DeleteAsync($"api/Cart/{id}"); await Load();} async Task Checkout(){await Api.PostAsync("api/Cart/checkout",new{UserId=Auth.UserId==0?1:Auth.UserId,DeliveryAddress=address}); await Load();}}

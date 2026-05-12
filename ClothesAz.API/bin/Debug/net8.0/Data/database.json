@@ -1,0 +1,366 @@
+{
+  "Users": [
+    {
+      "Id": 1,
+      "FullName": "Demo M\u00FC\u015Ft\u0259ri",
+      "Email": "customer@clothes.az",
+      "Password": "123456",
+      "Role": "Customer",
+      "Phone": "0500000000",
+      "City": "Bak\u0131",
+      "Address": "",
+      "CreatedAt": "2026-05-11T13:58:11.583812Z"
+    },
+    {
+      "Id": 2,
+      "FullName": "Demo Sat\u0131c\u0131",
+      "Email": "seller@clothes.az",
+      "Password": "123456",
+      "Role": "Seller",
+      "Phone": "0551112233",
+      "City": "Bak\u0131",
+      "Address": "",
+      "CreatedAt": "2026-05-11T13:58:11.5844783Z"
+    },
+    {
+      "Id": 3,
+      "FullName": "xed",
+      "Email": "xediceserif@gmail.com",
+      "Password": "123",
+      "Role": "Seller",
+      "Phone": "0516707306",
+      "City": "",
+      "Address": "",
+      "CreatedAt": "2026-05-11T14:00:04.4924947Z"
+    },
+    {
+      "Id": 4,
+      "FullName": "Xedice \u015Eerif",
+      "Email": "xsherif@std.beu.edu.az",
+      "Password": "123",
+      "Role": "Customer",
+      "Phone": "0516707306",
+      "City": "baki",
+      "Address": "dfs",
+      "CreatedAt": "2026-05-11T15:10:55.4525127Z"
+    },
+    {
+      "Id": 5,
+      "FullName": "khadija sherif",
+      "Email": "adhk@gmail.com",
+      "Password": "123",
+      "Role": "Seller",
+      "Phone": "0516707306",
+      "City": "baki",
+      "Address": "g",
+      "CreatedAt": "2026-05-11T17:38:48.2514793Z"
+    },
+    {
+      "Id": 6,
+      "FullName": "Yaqub R\u0259himli",
+      "Email": "yaqubrhimli660@gmail.com",
+      "Password": "123",
+      "Role": "Seller",
+      "Phone": "q2efr42",
+      "City": "23dfr ",
+      "Address": "2ffd2",
+      "CreatedAt": "2026-05-11T20:28:46.4776501Z"
+    }
+  ],
+  "SellerProfiles": [
+    {
+      "Id": 1,
+      "UserId": 2,
+      "StoreName": "TrendWear Baku",
+      "StoreDescription": "G\u0259ncl\u0259r \u00FC\u00E7\u00FCn trend geyiml\u0259r",
+      "Phone": "0551112233",
+      "City": "Bak\u0131",
+      "Address": "Nizami k\u00FC\u00E7.",
+      "Instagram": "@trendwear.az",
+      "DeliveryInfo": "B\u00FCt\u00FCn rayonlara \u00E7atd\u0131r\u0131lma",
+      "IsVerified": true
+    },
+    {
+      "Id": 2,
+      "UserId": 3,
+      "StoreName": "xed ma\u011Fazas\u0131",
+      "StoreDescription": "",
+      "Phone": "0516707306",
+      "City": "",
+      "Address": "",
+      "Instagram": "",
+      "DeliveryInfo": "B\u00FCt\u00FCn rayonlara \u00E7atd\u0131r\u0131lma",
+      "IsVerified": false
+    },
+    {
+      "Id": 3,
+      "UserId": 5,
+      "StoreName": "khadija sherif ma\u011Fazas\u0131",
+      "StoreDescription": "",
+      "Phone": "0516707306",
+      "City": "baki",
+      "Address": "g",
+      "Instagram": "",
+      "DeliveryInfo": "B\u00FCt\u00FCn rayonlara \u00E7atd\u0131r\u0131lma",
+      "IsVerified": false
+    },
+    {
+      "Id": 4,
+      "UserId": 6,
+      "StoreName": "Yaqub R\u0259himli ma\u011Fazas\u0131",
+      "StoreDescription": "",
+      "Phone": "q2efr42",
+      "City": "23dfr ",
+      "Address": "2ffd2",
+      "Instagram": "",
+      "DeliveryInfo": "B\u00FCt\u00FCn rayonlara \u00E7atd\u0131r\u0131lma",
+      "IsVerified": false
+    }
+  ],
+  "Categories": [
+    {
+      "Id": 1,
+      "Name": "Hoodie",
+      "Icon": "\uD83E\uDDE5"
+    },
+    {
+      "Id": 2,
+      "Name": "Ayaqqab\u0131",
+      "Icon": "\uD83D\uDC5F"
+    },
+    {
+      "Id": 3,
+      "Name": "\u015Ealvar",
+      "Icon": "\uD83D\uDC56"
+    },
+    {
+      "Id": 4,
+      "Name": "K\u00F6yn\u0259k",
+      "Icon": "\uD83D\uDC55"
+    },
+    {
+      "Id": 5,
+      "Name": "Aksesuar",
+      "Icon": "\uD83E\uDDE2"
+    }
+  ],
+  "Products": [
+    {
+      "Id": 1,
+      "SellerId": 2,
+      "CategoryId": 1,
+      "Name": "Oversize Hoodie",
+      "Description": "Rahat, qal\u0131n par\u00E7a, g\u00FCnd\u0259lik streetwear stil.",
+      "Price": 59,
+      "DiscountPrice": 49,
+      "Size": "S,M,L,XL",
+      "Color": "Qara",
+      "Brand": "ClothesAz",
+      "Gender": "Unisex",
+      "Stock": 18,
+      "ImageUrl": "https://images.unsplash.com/photo-1556821840-3a63f95609a7?w=700",
+      "IsTrend": true,
+      "IsFeatured": true,
+      "CreatedAt": "2026-05-11T13:58:11.5856807Z"
+    },
+    {
+      "Id": 2,
+      "SellerId": 2,
+      "CategoryId": 2,
+      "Name": "Sneaker",
+      "Description": "Minimal dizayn, g\u00FCnd\u0259lik istifad\u0259 \u00FC\u00E7\u00FCn rahat sneaker.",
+      "Price": 89,
+      "DiscountPrice": 69,
+      "Size": "40,41,42,43",
+      "Color": "A\u011F",
+      "Brand": "Urban",
+      "Gender": "Unisex",
+      "Stock": 11,
+      "ImageUrl": "https://images.unsplash.com/photo-1549298916-b41d501d3772?w=700",
+      "IsTrend": true,
+      "IsFeatured": false,
+      "CreatedAt": "2026-05-11T13:58:11.5862935Z"
+    },
+    {
+      "Id": 3,
+      "SellerId": 2,
+      "CategoryId": 3,
+      "Name": "Baggy Jeans",
+      "Description": "Yeni sezon baggy k\u0259sim cins \u015Falvar.",
+      "Price": 74,
+      "DiscountPrice": null,
+      "Size": "28,30,32,34",
+      "Color": "Mavi",
+      "Brand": "DenimPro",
+      "Gender": "Ki\u015Fi",
+      "Stock": 18,
+      "ImageUrl": "https://images.unsplash.com/photo-1541099649105-f69ad21f3246?w=700",
+      "IsTrend": false,
+      "IsFeatured": true,
+      "CreatedAt": "2026-05-11T13:58:11.586294Z"
+    },
+    {
+      "Id": 4,
+      "SellerId": 2,
+      "CategoryId": 4,
+      "Name": "Basic T-Shirt",
+      "Description": "100% pamb\u0131q basic a\u011F k\u00F6yn\u0259k.",
+      "Price": 24,
+      "DiscountPrice": 19,
+      "Size": "S,M,L",
+      "Color": "A\u011F",
+      "Brand": "BasicLine",
+      "Gender": "Unisex",
+      "Stock": 40,
+      "ImageUrl": "https://images.unsplash.com/photo-1521572163474-6864f9cf17ab?w=700",
+      "IsTrend": false,
+      "IsFeatured": false,
+      "CreatedAt": "2026-05-11T13:58:11.5862942Z"
+    },
+    {
+      "Id": 5,
+      "SellerId": 6,
+      "CategoryId": 1,
+      "Name": "salam",
+      "Description": "",
+      "Price": 1,
+      "DiscountPrice": null,
+      "Size": "S,M,L",
+      "Color": "",
+      "Brand": "",
+      "Gender": "Unisex",
+      "Stock": 10,
+      "ImageUrl": "",
+      "IsTrend": false,
+      "IsFeatured": false,
+      "CreatedAt": "2026-05-11T20:35:26.4258306Z"
+    },
+    {
+      "Id": 6,
+      "SellerId": 6,
+      "CategoryId": 1,
+      "Name": "ytytif",
+      "Description": "",
+      "Price": 12,
+      "DiscountPrice": null,
+      "Size": "S,M,L",
+      "Color": "",
+      "Brand": "",
+      "Gender": "Unisex",
+      "Stock": 10,
+      "ImageUrl": "",
+      "IsTrend": false,
+      "IsFeatured": false,
+      "CreatedAt": "2026-05-11T20:37:09.7406478Z"
+    }
+  ],
+  "CartItems": [
+    {
+      "Id": 1,
+      "UserId": 3,
+      "ProductId": 1,
+      "Quantity": 1
+    },
+    {
+      "Id": 2,
+      "UserId": 1,
+      "ProductId": 1,
+      "Quantity": 1
+    }
+  ],
+  "Favorites": [
+    {
+      "Id": 1,
+      "UserId": 4,
+      "ProductId": 1
+    },
+    {
+      "Id": 2,
+      "UserId": 6,
+      "ProductId": 1
+    }
+  ],
+  "ViewedProducts": [
+    {
+      "Id": 1,
+      "UserId": 1,
+      "ProductId": 3,
+      "ViewedAt": "2026-05-11T14:03:02.9063721Z"
+    },
+    {
+      "Id": 2,
+      "UserId": 1,
+      "ProductId": 1,
+      "ViewedAt": "2026-05-11T15:07:40.3535477Z"
+    },
+    {
+      "Id": 3,
+      "UserId": 4,
+      "ProductId": 1,
+      "ViewedAt": "2026-05-11T15:11:02.9947328Z"
+    },
+    {
+      "Id": 4,
+      "UserId": 4,
+      "ProductId": 2,
+      "ViewedAt": "2026-05-11T15:11:13.1966897Z"
+    },
+    {
+      "Id": 5,
+      "UserId": 6,
+      "ProductId": 6,
+      "ViewedAt": "2026-05-11T20:37:16.2589805Z"
+    }
+  ],
+  "Orders": [
+    {
+      "Id": 1,
+      "UserId": 1,
+      "OrderDate": "2026-05-11T13:58:43.5166391Z",
+      "Status": "Haz\u0131rlan\u0131r",
+      "DeliveryAddress": "Bak\u0131",
+      "TotalAmount": 69,
+      "Items": [
+        {
+          "ProductId": 2,
+          "ProductName": "A\u011F Sneaker",
+          "Quantity": 1,
+          "UnitPrice": 69
+        }
+      ]
+    },
+    {
+      "Id": 2,
+      "UserId": 1,
+      "OrderDate": "2026-05-11T14:10:37.0179389Z",
+      "Status": "Haz\u0131rlan\u0131r",
+      "DeliveryAddress": "Bak\u0131",
+      "TotalAmount": 98,
+      "Items": [
+        {
+          "ProductId": 1,
+          "ProductName": "Qara Oversize Hoodie",
+          "Quantity": 2,
+          "UnitPrice": 49
+        }
+      ]
+    }
+  ],
+  "Reviews": [],
+  "AiMessages": [
+    {
+      "Id": 1,
+      "UserId": 4,
+      "Question": "ag",
+      "Answer": "Axtard\u0131\u011F\u0131n stil\u0259 \u0259n yax\u0131n m\u0259hsullar\u0131 tapd\u0131m. R\u0259ng, \u00F6l\u00E7\u00FC v\u0259 qiym\u0259t filteri d\u0259 yaza bil\u0259rs\u0259n.",
+      "CreatedAt": "2026-05-11T16:33:05.3331249Z"
+    },
+    {
+      "Id": 2,
+      "UserId": 4,
+      "Question": "",
+      "Answer": "Axtard\u0131\u011F\u0131n stil\u0259 \u0259n yax\u0131n m\u0259hsullar\u0131 tapd\u0131m. R\u0259ng, \u00F6l\u00E7\u00FC v\u0259 qiym\u0259t filteri d\u0259 yaza bil\u0259rs\u0259n.",
+      "CreatedAt": "2026-05-11T16:33:48.7214073Z"
+    }
+  ]
+}

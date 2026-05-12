@@ -1,0 +1,66 @@
+﻿@page "/register"
+@inject ApiService Api
+@inject NavigationManager Nav
+
+<h1>Qeydiyyat</h1>
+
+<div class="cardx" style="max-width:700px">
+    <input @bind="fullName" placeholder="Ad Soyad" />
+    <input @bind="email" placeholder="Email" />
+    <input @bind="password" type="password" placeholder="Şifrə" />
+    <input @bind="phone" placeholder="Telefon" />
+    <input @bind="city" placeholder="Şəhər/Rayon" />
+    <input @bind="address" placeholder="Ünvan" />
+
+    <div style="margin:20px 0;">
+        <label>Rol:</label>
+        <select @bind="role">
+            <option value="Customer">Müştəri</option>
+            <option value="Seller">Satıcı</option>
+        </select>
+    </div>
+
+    <button @onclick="RegisterUser">
+        Hesab yarat
+    </button>
+
+    @if (!string.IsNullOrWhiteSpace(error))
+    {
+        <p style="color:red">@error</p>
+    }
+</div>
+
+@code {
+    string fullName = "";
+    string email = "";
+    string password = "";
+    string phone = "";
+    string city = "";
+    string address = "";
+    string role = "Customer";
+    string error = "";
+
+    async Task RegisterUser()
+    {
+        error = "";
+
+        var response = await Api.PostAsync("api/Auth/register", new
+        {
+            FullName = fullName,
+            Email = email,
+            Password = password,
+            Phone = phone,
+            City = city,
+            Address = address,
+            Role = role
+        });
+
+        if (!response.IsSuccessStatusCode)
+        {
+            error = await response.Content.ReadAsStringAsync();
+            return;
+        }
+
+        Nav.NavigateTo("/login", true);
+    }
+}

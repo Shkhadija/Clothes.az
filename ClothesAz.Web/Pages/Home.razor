@@ -1,0 +1,99 @@
+@page "/home"
+
+@inject ApiService Api
+@inject AuthService Auth
+@inject NavigationManager Nav
+
+<h1 class="page-title">Moda dünyasına xoş gəlmisiniz ✨</h1>
+@if (home == null)
+{
+    <p class="page-subtitle">
+        AI ilə stilinizi tapın, sevimli məhsulları kəşf edin və rahat alış-veriş edin.
+    </p>
+}
+else
+{
+    <!-- Bannerlər -->
+    <div class="banner-row">
+
+        <!-- Banner 1 -->
+        <div class="banner">
+            <h2>Yeni sezon geyimlərdə 40%-dək endirim</h2>
+            <button @onclick='() => Nav.NavigateTo("/catalog")'>
+                Endirimləri gör →
+            </button>
+        </div>
+
+        <!-- Banner 2 -->
+        <div class="banner">
+            <h2>AI ilə şəkilə görə oxşar geyimi tap</h2>
+            <button @onclick='() => Nav.NavigateTo("/ai")'>
+                AI axtarışa keç →
+            </button>
+        </div>
+
+        <!-- Banner 3 -->
+        @if (Auth.UserRole != "Seller")
+        {
+            <div class="banner">
+                <h2>Satıcı ol və mağazanı 5 dəqiqəyə aç</h2>
+                <button @onclick='() => Nav.NavigateTo("/register")'>
+                    Satıcı kimi qeydiyyat →
+                </button>
+            </div>
+        }
+
+    </div>
+
+    <!-- Kateqoriyalar -->
+    <h2>Kateqoriyalar</h2>
+
+    <div class="cat-row">
+        @foreach (var c in home.Categories)
+        {
+            <a class="cat" href="/catalog?cat=@c.Id">
+                <b>@c.Icon</b>
+                <span>@c.Name</span>
+            </a>
+        }
+    </div>
+
+    <!-- Trend məhsullar -->
+    <Section Title="Trend məhsullar" Items="CleanProductNames(home.Trend)" />
+
+    <!-- Əvvəl baxdıqlarınız -->
+    @if (home.Viewed.Any())
+    {
+        <Section Title="Əvvəl baxdıqlarınız" Items="CleanProductNames(home.Viewed)" />
+    }
+
+    <!-- Sizin üçün seçdik -->
+    <Section Title="Sizin üçün seçdik" Items="CleanProductNames(home.Featured)" />
+}
+
+@code {
+    HomeResponse? home;
+
+    protected override async Task OnInitializedAsync()
+    {
+        await Auth.InitAsync();
+
+        home = await Api.GetAsync<HomeResponse>(
+            $"api/Marketplace/home/{(Auth.UserId == 0 ? 1 : Auth.UserId)}");
+    }
+
+    List<Product> CleanProductNames(List<Product> products)
+    {
+        foreach (var product in products)
+        {
+            product.Name = product.Name
+                .Replace("Qara ", "")
+                .Replace("Ağ ", "")
+                .Replace("Mavi ", "")
+                .Replace("Qırmızı ", "")
+                .Replace("Yaşıl ", "");
+        }
+
+        return products;
+    }
+}

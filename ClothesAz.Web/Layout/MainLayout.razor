@@ -1,0 +1,101 @@
+@inherits LayoutComponentBase
+@implements IDisposable
+@using Microsoft.AspNetCore.Components.Web
+
+@inject AuthService Auth
+@inject NavigationManager Nav
+@inject CartService CartService
+
+<div class="shell">
+    <header class="topbar">
+        <div class="brand" @onclick="GoHome">
+            <span class="logo">C</span>
+            <b>ClothesAz</b>
+            <small>AI Marketplace</small>
+        </div>
+
+        <div class="search">
+            <span>🔎</span>
+            <input placeholder="Məhsul, rəng, stil axtar..."
+                   @bind="query"
+                   @onkeydown="Search" />
+        </div>
+
+        <div class="userbox"
+             @onclick='() => Nav.NavigateTo(Auth.IsLoggedIn ? "/cabinet" : "/login")'
+             style="cursor:pointer">
+            @if (Auth.IsLoggedIn)
+            {
+                @Auth.UserName
+            }
+            else
+            {
+                <span>Daxil ol</span>
+            }
+        </div>
+    </header>
+
+    <main class="content">
+        @Body
+    </main>
+
+    <nav class="bottom-nav">
+        <a href="/home">🏠<span>Əsas</span></a>
+        <a href="/catalog">▦<span>Kataloq</span></a>
+        <a class="ai-tab" href="/ai">✨<span>AI</span></a>
+        <a href="/favorites">♡<span>Sevimlilər</span></a>
+
+        <!-- Səbət -->
+        <a href="/cart" class="cart-link">
+            🛒
+            @if (CartService.TotalItems > 0)
+            {
+                <span class="cart-badge">@CartService.TotalItems</span>
+            }
+            <span>Səbət</span>
+        </a>
+
+        <a href="/cabinet">
+            👤
+            <span>Kabinet</span>
+        </a>
+    </nav>
+</div>
+
+@code {
+    private string query = "";
+
+    protected override async Task OnInitializedAsync()
+    {
+        // localStorage-dən istifadəçi məlumatlarını oxu
+        await Auth.InitAsync();
+
+        // Event-lərə qoşul
+        CartService.OnChange += Refresh;
+        Auth.OnChange += Refresh;
+    }
+
+    private void Refresh()
+    {
+        InvokeAsync(StateHasChanged);
+    }
+
+    private void GoHome()
+    {
+        Nav.NavigateTo("/home");
+    }
+
+    private void Search(KeyboardEventArgs e)
+    {
+        if (e.Key == "Enter" && !string.IsNullOrWhiteSpace(query))
+        {
+            Nav.NavigateTo($"/catalog?q={Uri.EscapeDataString(query)}");
+        }
+    }
+
+    public void Dispose()
+    {
+        CartService.OnChange -= Refresh;
+        Auth.OnChange -= Refresh;
+    }
+}

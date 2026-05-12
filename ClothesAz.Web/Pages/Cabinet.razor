@@ -1,0 +1,64 @@
+@page "/cabinet"
+@inject AuthService Auth
+@inject NavigationManager Nav
+
+<h1>Kabinet</h1>
+
+@code {
+    bool showRegister = false;
+
+    protected override async Task OnInitializedAsync()
+    {
+        await Auth.InitAsync();
+    }
+
+    async Task Logout()
+    {
+        await Auth.LogoutAsync();
+        Nav.NavigateTo("/cabinet", true);
+    }
+}
+
+@if (!Auth.IsLoggedIn)
+{
+    <div class="cardx" style="max-width: 700px;">
+
+        <div style="display:flex; gap:10px; margin-bottom:20px;">
+            <button class="@(showRegister ? "" : "active")"
+                    @onclick="() => showRegister = false">
+                Daxil ol
+            </button>
+
+            <button @onclick='() => Nav.NavigateTo("/register")'>
+                Qeydiyyat
+            </button>
+        </div>
+
+        @if (!showRegister)
+        {
+            <Login />
+        }
+        else
+        {
+            <Register />
+        }
+    </div>
+}
+else
+{
+    <div class="cardx">
+        <h2>@Auth.UserName</h2>
+        <p>Rol: @Auth.UserRole</p>
+
+        <a href="/orders">Sifarişlərim</a>
+        <br />
+
+        @if (Auth.UserRole == "Seller")
+        {
+            <a href="/seller">Satıcı paneli</a>
+            <br />
+        }
+
+        <button @onclick="Logout">Çıxış</button>
+    </div>
+}

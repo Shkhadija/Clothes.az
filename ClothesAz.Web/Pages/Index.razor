@@ -1,0 +1,31 @@
+@page "/"
+@inject ApiService Api
+@inject AuthService Auth
+@inject NavigationManager Nav
+
+<div class="auth-page">
+    <section class="hero-auth">
+        <span class="badge">Startup Marketplace</span>
+        <h1>Azərbaycanın AI dəstəkli geyim satış platforması</h1>
+        <p>Müştəri kimi trend məhsulları tap, satıcı kimi mağazanı idarə et. Şəkil və yazı ilə AI axtarış sistemi layihənin əsas fərqidir.</p>
+        <div class="hero-stats"><b>AI Search</b><b>Seller Panel</b><b>JSON DB</b></div>
+    </section>
+    <section class="auth-card">
+        <div class="tabs"><button class="@(mode=="login"?"active":"")" @onclick='()=>mode="login"'>Daxil ol</button><button class="@(mode=="register"?"active":"")" @onclick='()=>mode="register"'>Qeydiyyat</button></div>
+        @if(mode=="login"){
+            <input placeholder="Email" @bind="login.Email" /><input type="password" placeholder="Şifrə" @bind="login.Password" />
+            <button class="primary" @onclick="DoLogin">Daxil ol</button>
+            <p class="hint">Demo: customer@clothes.az / 123456 və ya seller@clothes.az / 123456</p>
+        } else {
+            <div class="rolepick"><button class="@(reg.Role=="Customer"?"active":"")" @onclick='()=>reg.Role="Customer"'>Müştəri</button><button class="@(reg.Role=="Seller"?"active":"")" @onclick='()=>reg.Role="Seller"'>Satıcı</button></div>
+            <input placeholder="Ad Soyad" @bind="reg.FullName" /><input placeholder="Email" @bind="reg.Email" /><input type="password" placeholder="Şifrə" @bind="reg.Password" />
+            <input placeholder="Telefon" @bind="reg.Phone" /><input placeholder="Şəhər/Rayon" @bind="reg.City" /><input placeholder="Ünvan" @bind="reg.Address" />
+            @if(reg.Role=="Seller") { <input placeholder="Mağaza adı" @bind="reg.StoreName" /><input placeholder="Instagram/TikTok link" @bind="reg.Instagram" /><textarea placeholder="Mağaza haqqında" @bind="reg.StoreDescription"></textarea> }
+            <button class="primary" @onclick="DoRegister">Hesab yarat</button>
+        }
+        @if(!string.IsNullOrWhiteSpace(error)){<p class="error">@error</p>}
+    </section>
+</div>
+@code{ string mode="login"; LoginRequest login=new(){Email="customer@clothes.az",Password="123456"}; RegisterRequest reg=new(){Role="Customer"}; string error="";
+async Task DoLogin(){error=""; var r=await Api.PostAsync("api/Auth/login",login); if(r.IsSuccessStatusCode){var res=await r.Content.ReadFromJsonAsync<AuthResponse>(); if(res!=null){await Auth.LoginAsync(res); Nav.NavigateTo(res.Role=="Seller"?"/seller":"/home");}} else error=await r.Content.ReadAsStringAsync();}
+async Task DoRegister(){error=""; var r=await Api.PostAsync("api/Auth/register",reg); if(r.IsSuccessStatusCode){var res=await r.Content.ReadFromJsonAsync<AuthResponse>(); if(res!=null){await Auth.LoginAsync(res); Nav.NavigateTo(res.Role=="Seller"?"/seller":"/home");}} else error=await r.Content.ReadAsStringAsync();}}

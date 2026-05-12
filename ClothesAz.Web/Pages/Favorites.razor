@@ -1,0 +1,5 @@
+@page "/favorites"
+@inject ApiService Api
+@inject AuthService Auth
+<h1>Sevimlilər</h1><div class="product-grid">@foreach(var p in products){<ClothesAz.Web.Shared.ProductCard Product="p" />}</div>
+@code{List<Product> products=new(); protected override async Task OnInitializedAsync(){await Auth.InitAsync(); products=await Api.GetAsync<List<Product>>($"api/Favorites/{(Auth.UserId==0?1:Auth.UserId)}")??new();}}

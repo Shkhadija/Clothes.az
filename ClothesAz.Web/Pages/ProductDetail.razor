@@ -1,0 +1,6 @@
+@page "/product/{Id:int}"
+@inject ApiService Api
+@inject AuthService Auth
+@inject NavigationManager Nav
+@if(p==null){<p>Yüklənir...</p>} else {<div class="detail"><img src="@p.ImageUrl"/><section><span class="badge">@p.CategoryName</span><h1>@p.Name</h1><p>@p.Description</p><h2>@p.CurrentPrice ₼ @if(p.DiscountPrice!=null){<small>@p.Price ₼</small>}</h2><p>Ölçü: @p.Size · Rəng: @p.Color · Satıcı: @p.StoreName</p><button class="primary" @onclick="AddCart">Səbətə at</button><button @onclick="Fav">♡ Sevimli</button></section></div>}
+@code{[Parameter] public int Id{get;set;} Product? p; protected override async Task OnInitializedAsync(){await Auth.InitAsync(); p=await Api.GetAsync<Product>($"api/Products/{Id}?userId={(Auth.UserId==0?1:Auth.UserId)}");} async Task AddCart(){await Api.PostAsync($"api/Cart/{(Auth.UserId==0?1:Auth.UserId)}/{Id}",new{}); Nav.NavigateTo("/cart");} async Task Fav(){await Api.PostAsync($"api/Favorites/{(Auth.UserId==0?1:Auth.UserId)}/{Id}",new{});}}

@@ -1,0 +1,3 @@
+@using ClothesAz.Web.Shared
+<h2>@Title</h2><div class="product-grid">@foreach(var p in Items){<ProductCard Product="p" />}</div>
+@code{[Parameter] public string Title {get;set;}=""; [Parameter] public IEnumerable<Product> Items {get;set;}=Array.Empty<Product>();}

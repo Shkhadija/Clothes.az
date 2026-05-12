@@ -1,0 +1,230 @@
+@inject ApiService Api
+@inject AuthService Auth
+@inject NavigationManager Nav
+@inject IJSRuntime JS
+@inject CartService CartService
+
+<div class="product-card">
+    <!-- Sevimlilər -->
+    <button class="heart @(isFavorite ? "favorite" : "")"
+            @onclick="Fav">
+        @(isFavorite ? "♥" : "♡")
+    </button>
+
+    <!-- Məhsul şəkli -->
+    <img src="@(string.IsNullOrWhiteSpace(Product.ImageUrl)
+                 ? "https://images.unsplash.com/photo-1445205170230-053b83016050?w=700"
+                 : Product.ImageUrl)"
+         @onclick='() => Nav.NavigateTo($"/product/{Product.Id}")' />
+
+    <!-- Məhsul məlumatı -->
+    <div class="pc-body"
+         @onclick='() => Nav.NavigateTo($"/product/{Product.Id}")'>
+
+        @if (Product.IsTrend)
+        {
+            <span class="tag">Trend</span>
+        }
+
+        <h3>@Product.Name</h3>
+        <p>@Product.StoreName</p>
+
+        <b>@Product.CurrentPrice ₼</b>
+
+        @if (Product.DiscountPrice != null)
+        {
+            <small>@Product.Price ₼</small>
+        }
+    </div>
+
+    <!-- Düymələr -->
+    @if (SellerMode)
+    {
+        <button class="danger" @onclick="Delete">
+            Sil
+        </button>
+    }
+    else
+    {
+        <button class="cart-btn" @onclick="OpenOptions">
+            🛒 Səbətə
+        </button>
+    }
+</div>
+
+<!-- Ölçü və rəng popup -->
+@if (showOptions)
+{
+    <div class="modal-overlay">
+        <div class="modal-box">
+            <h3>@Product.Name</h3>
+
+            <label>Rəng:</label>
+            <select @bind="selectedColor">
+                @foreach (var color in Colors)
+                {
+                    <option value="@color">@color</option>
+                }
+            </select>
+
+            <label>Ölçü:</label>
+            <select @bind="selectedSize">
+                @foreach (var size in Sizes)
+                {
+                    <option value="@size">@size</option>
+                }
+            </select>
+
+            <div style="margin-top:15px; display:flex; gap:10px;">
+                <button class="primary"
+                        @onclick="ConfirmAddToCart">
+                    Təsdiqlə
+                </button>
+
+                <button @onclick="CloseOptions">
+                    Ləğv et
+                </button>
+            </div>
+        </div>
+    </div>
+}
+
+@code {
+    [Parameter, EditorRequired]
+    public Product Product { get; set; } = new();
+
+    [Parameter]
+    public bool SellerMode { get; set; }
+
+    [Parameter]
+    public EventCallback OnDeleted { get; set; }
+
+    bool showOptions = false;
+    bool isFavorite = false;
+
+    string selectedColor = "Qara";
+    string selectedSize = "M";
+
+    List<string> Colors = new();
+    List<string> Sizes = new();
+
+    protected override async Task OnInitializedAsync()
+    {
+        // Məhsulun öz rənglərinə görə siyahı yarat
+        if (!string.IsNullOrWhiteSpace(Product.Color))
+        {
+            Colors = Product.Color
+                .Split(',', StringSplitOptions.RemoveEmptyEntries)
+                .Select(x => x.Trim())
+                .ToList();
+        }
+        else
+        {
+            Colors = new List<string> { "Qara" };
+        }
+
+        // Məhsulun öz ölçülərinə görə siyahı yarat
+        if (!string.IsNullOrWhiteSpace(Product.Size))
+        {
+            Sizes = Product.Size
+                .Split(',', StringSplitOptions.RemoveEmptyEntries)
+                .Select(x => x.Trim())
+                .ToList();
+        }
+        else
+        {
+            Sizes = new List<string> { "M" };
+        }
+
+        selectedColor = Colors.FirstOrDefault() ?? "Qara";
+        selectedSize = Sizes.FirstOrDefault() ?? "M";
+
+        // Login olubsa sevimli olub-olmadığını yoxla
+        await Auth.InitAsync();
+
+        if (Auth.IsLoggedIn)
+        {
+            var favorites = await Api.GetAsync<List<Product>>(
+                $"api/Favorites/{Auth.UserId}");
+
+            if (favorites != null)
+            {
+                isFavorite = favorites.Any(x => x.Id == Product.Id);
+            }
+        }
+    }
+
+    void OpenOptions()
+    {
+        selectedColor = Colors.FirstOrDefault() ?? "Qara";
+        selectedSize = Sizes.FirstOrDefault() ?? "M";
+        showOptions = true;
+    }
+
+    void CloseOptions()
+    {
+        showOptions = false;
+    }
+
+    async Task ConfirmAddToCart()
+    {
+        await Auth.InitAsync();
+
+        if (!Auth.IsLoggedIn)
+        {
+            await JS.InvokeVoidAsync(
+                "alert",
+                "Səbətə məhsul əlavə etmək üçün əvvəlcə daxil olun.");
+
+            showOptions = false;
+            return;
+        }
+
+        var response = await Api.PostAsync(
+            $"api/Cart/{Auth.UserId}/{Product.Id}",
+            new
+            {
+                Color = selectedColor,
+                Size = selectedSize
+            });
+
+        if (response.IsSuccessStatusCode)
+        {
+            CartService.AddToCart(
+                Product.Id,
+                selectedColor,
+                selectedSize);
+        }
+
+        showOptions = false;
+    }
+
+    async Task Fav()
+    {
+        await Auth.InitAsync();
+
+        if (!Auth.IsLoggedIn)
+        {
+            await JS.InvokeVoidAsync(
+                "alert",
+                "Sevimlilərə əlavə etmək üçün əvvəlcə daxil olun.");
+            return;
+        }
+
+        var response = await Api.PostAsync(
+            $"api/Favorites/{Auth.UserId}/{Product.Id}",
+            new { });
+
+        if (response.IsSuccessStatusCode)
+        {
+            isFavorite = !isFavorite;
+            StateHasChanged();
+        }
+    }
+
+    async Task Delete()
+    {
+        await Api.DeleteAsync($"api/Products/{Product.Id}");
+        await OnDeleted.InvokeAsync();
+    }
+}

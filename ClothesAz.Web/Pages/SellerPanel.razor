@@ -1,0 +1,39 @@
+@page "/seller"
+
+@inject ApiService Api
+@inject AuthService Auth
+@inject NavigationManager Nav
+@inject IJSRuntime JS
+
+<h1>Satıcı Paneli</h1>
+
+<input @bind="model.Name" placeholder="Məhsul adı" />
+<input @bind="model.Price" type="number" placeholder="Qiymət" />
+<input @bind="model.ImageUrl" placeholder="Şəkil URL" />
+
+<button class="primary" @onclick="Save">
+    Məhsul əlavə et
+</button>
+
+@code {
+    CreateProduct model = new();
+
+    async Task Save()
+    {
+        model.SellerId = Auth.UserId;
+        model.CategoryId = 1;
+        model.Stock = 10;
+
+        var response = await Api.PostAsync("api/Products", model);
+
+        if (response.IsSuccessStatusCode)
+        {
+            await JS.InvokeVoidAsync("alert", "Məhsul əlavə olundu.");
+            Nav.NavigateTo("/catalog", true);
+        }
+        else
+        {
+            await JS.InvokeVoidAsync("alert", "Xəta baş verdi.");
+        }
+    }
+}

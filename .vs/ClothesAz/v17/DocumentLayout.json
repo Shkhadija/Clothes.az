@@ -1,0 +1,346 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "C:\\Users\\USER\\Desktop\\ClothesAz\\ClothesAz\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{7854A370-B6F9-4BBC-83BC-49715789F08F}|ClothesAz.Web\\ClothesAz.Web.csproj|c:\\users\\user\\desktop\\clothesaz\\clothesaz\\clothesaz.web\\pages\\home.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{7854A370-B6F9-4BBC-83BC-49715789F08F}|ClothesAz.Web\\ClothesAz.Web.csproj|solutionrelative:clothesaz.web\\pages\\home.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{7854A370-B6F9-4BBC-83BC-49715789F08F}|ClothesAz.Web\\ClothesAz.Web.csproj|c:\\users\\user\\desktop\\clothesaz\\clothesaz\\clothesaz.web\\pages\\sellerpanel.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{7854A370-B6F9-4BBC-83BC-49715789F08F}|ClothesAz.Web\\ClothesAz.Web.csproj|solutionrelative:clothesaz.web\\pages\\sellerpanel.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{7854A370-B6F9-4BBC-83BC-49715789F08F}|ClothesAz.Web\\ClothesAz.Web.csproj|c:\\users\\user\\desktop\\clothesaz\\clothesaz\\clothesaz.web\\pages\\cabinet.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{7854A370-B6F9-4BBC-83BC-49715789F08F}|ClothesAz.Web\\ClothesAz.Web.csproj|solutionrelative:clothesaz.web\\pages\\cabinet.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{7854A370-B6F9-4BBC-83BC-49715789F08F}|ClothesAz.Web\\ClothesAz.Web.csproj|c:\\users\\user\\desktop\\clothesaz\\clothesaz\\clothesaz.web\\services\\clientmodels.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{7854A370-B6F9-4BBC-83BC-49715789F08F}|ClothesAz.Web\\ClothesAz.Web.csproj|solutionrelative:clothesaz.web\\services\\clientmodels.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{7854A370-B6F9-4BBC-83BC-49715789F08F}|ClothesAz.Web\\ClothesAz.Web.csproj|c:\\users\\user\\desktop\\clothesaz\\clothesaz\\clothesaz.web\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{7854A370-B6F9-4BBC-83BC-49715789F08F}|ClothesAz.Web\\ClothesAz.Web.csproj|solutionrelative:clothesaz.web\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{7854A370-B6F9-4BBC-83BC-49715789F08F}|ClothesAz.Web\\ClothesAz.Web.csproj|c:\\users\\user\\desktop\\clothesaz\\clothesaz\\clothesaz.web\\wwwroot\\app.css||{A5401142-F49D-43DB-90B1-F57BA349E55C}",
+      "RelativeMoniker": "D:0:0:{7854A370-B6F9-4BBC-83BC-49715789F08F}|ClothesAz.Web\\ClothesAz.Web.csproj|solutionrelative:clothesaz.web\\wwwroot\\app.css||{A5401142-F49D-43DB-90B1-F57BA349E55C}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{97893E6A-B358-462C-AD2E-7E1F5CBF2A59}|ClothesAz.API\\ClothesAz.API.csproj|c:\\users\\user\\desktop\\clothesaz\\clothesaz\\clothesaz.api\\controllers\\aicontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{97893E6A-B358-462C-AD2E-7E1F5CBF2A59}|ClothesAz.API\\ClothesAz.API.csproj|solutionrelative:clothesaz.api\\controllers\\aicontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{7854A370-B6F9-4BBC-83BC-49715789F08F}|ClothesAz.Web\\ClothesAz.Web.csproj|c:\\users\\user\\desktop\\clothesaz\\clothesaz\\clothesaz.web\\shared\\productcard.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{7854A370-B6F9-4BBC-83BC-49715789F08F}|ClothesAz.Web\\ClothesAz.Web.csproj|solutionrelative:clothesaz.web\\shared\\productcard.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{97893E6A-B358-462C-AD2E-7E1F5CBF2A59}|ClothesAz.API\\ClothesAz.API.csproj|c:\\users\\user\\desktop\\clothesaz\\clothesaz\\clothesaz.api\\data\\jsondatabaseservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{97893E6A-B358-462C-AD2E-7E1F5CBF2A59}|ClothesAz.API\\ClothesAz.API.csproj|solutionrelative:clothesaz.api\\data\\jsondatabaseservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{97893E6A-B358-462C-AD2E-7E1F5CBF2A59}|ClothesAz.API\\ClothesAz.API.csproj|c:\\users\\user\\desktop\\clothesaz\\clothesaz\\clothesaz.api\\dtos\\airequest.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{97893E6A-B358-462C-AD2E-7E1F5CBF2A59}|ClothesAz.API\\ClothesAz.API.csproj|solutionrelative:clothesaz.api\\dtos\\airequest.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{7854A370-B6F9-4BBC-83BC-49715789F08F}|ClothesAz.Web\\ClothesAz.Web.csproj|c:\\users\\user\\desktop\\clothesaz\\clothesaz\\clothesaz.web\\pages\\catalog.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{7854A370-B6F9-4BBC-83BC-49715789F08F}|ClothesAz.Web\\ClothesAz.Web.csproj|solutionrelative:clothesaz.web\\pages\\catalog.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{7854A370-B6F9-4BBC-83BC-49715789F08F}|ClothesAz.Web\\ClothesAz.Web.csproj|c:\\users\\user\\desktop\\clothesaz\\clothesaz\\clothesaz.web\\layout\\mainlayout.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{7854A370-B6F9-4BBC-83BC-49715789F08F}|ClothesAz.Web\\ClothesAz.Web.csproj|solutionrelative:clothesaz.web\\layout\\mainlayout.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{7854A370-B6F9-4BBC-83BC-49715789F08F}|ClothesAz.Web\\ClothesAz.Web.csproj|c:\\users\\user\\desktop\\clothesaz\\clothesaz\\clothesaz.web\\_imports.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{7854A370-B6F9-4BBC-83BC-49715789F08F}|ClothesAz.Web\\ClothesAz.Web.csproj|solutionrelative:clothesaz.web\\_imports.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{97893E6A-B358-462C-AD2E-7E1F5CBF2A59}|ClothesAz.API\\ClothesAz.API.csproj|c:\\users\\user\\desktop\\clothesaz\\clothesaz\\clothesaz.api\\data\\database.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
+      "RelativeMoniker": "D:0:0:{97893E6A-B358-462C-AD2E-7E1F5CBF2A59}|ClothesAz.API\\ClothesAz.API.csproj|solutionrelative:clothesaz.api\\data\\database.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{7854A370-B6F9-4BBC-83BC-49715789F08F}|ClothesAz.Web\\ClothesAz.Web.csproj|c:\\users\\user\\desktop\\clothesaz\\clothesaz\\clothesaz.web\\pages\\register.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{7854A370-B6F9-4BBC-83BC-49715789F08F}|ClothesAz.Web\\ClothesAz.Web.csproj|solutionrelative:clothesaz.web\\pages\\register.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{7854A370-B6F9-4BBC-83BC-49715789F08F}|ClothesAz.Web\\ClothesAz.Web.csproj|c:\\users\\user\\desktop\\clothesaz\\clothesaz\\clothesaz.web\\services\\cartservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{7854A370-B6F9-4BBC-83BC-49715789F08F}|ClothesAz.Web\\ClothesAz.Web.csproj|solutionrelative:clothesaz.web\\services\\cartservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{7854A370-B6F9-4BBC-83BC-49715789F08F}|ClothesAz.Web\\ClothesAz.Web.csproj|c:\\users\\user\\desktop\\clothesaz\\clothesaz\\clothesaz.web\\properties\\launchsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
+      "RelativeMoniker": "D:0:0:{7854A370-B6F9-4BBC-83BC-49715789F08F}|ClothesAz.Web\\ClothesAz.Web.csproj|solutionrelative:clothesaz.web\\properties\\launchsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{7854A370-B6F9-4BBC-83BC-49715789F08F}|ClothesAz.Web\\ClothesAz.Web.csproj|c:\\users\\user\\desktop\\clothesaz\\clothesaz\\clothesaz.web\\pages\\login.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{7854A370-B6F9-4BBC-83BC-49715789F08F}|ClothesAz.Web\\ClothesAz.Web.csproj|solutionrelative:clothesaz.web\\pages\\login.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{7854A370-B6F9-4BBC-83BC-49715789F08F}|ClothesAz.Web\\ClothesAz.Web.csproj|c:\\users\\user\\desktop\\clothesaz\\clothesaz\\clothesaz.web\\services\\authservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{7854A370-B6F9-4BBC-83BC-49715789F08F}|ClothesAz.Web\\ClothesAz.Web.csproj|solutionrelative:clothesaz.web\\services\\authservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 14,
+          "Children": [
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{b1e99781-ab81-11d0-b683-00aa00a3ee26}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{1c4feeaa-4718-4aa9-859d-94ce25d182ba}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{eefa5220-e298-11d0-8f78-00a0c9110057}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{56df62a4-05a3-4e5b-aa1a-99371ccfb997}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{3ae79031-e1bc-11d0-8f78-00a0c9110057}"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "SellerPanel.razor",
+              "DocumentMoniker": "C:\\Users\\USER\\Desktop\\ClothesAz\\ClothesAz\\ClothesAz.Web\\Pages\\SellerPanel.razor",
+              "RelativeDocumentMoniker": "ClothesAz.Web\\Pages\\SellerPanel.razor",
+              "ToolTip": "C:\\Users\\USER\\Desktop\\ClothesAz\\ClothesAz\\ClothesAz.Web\\Pages\\SellerPanel.razor",
+              "RelativeToolTip": "ClothesAz.Web\\Pages\\SellerPanel.razor",
+              "ViewState": "AgIAAA0AAAAAAAAAAAAYwCYAAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2026-05-11T20:25:10.343Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "AiController.cs",
+              "DocumentMoniker": "C:\\Users\\USER\\Desktop\\ClothesAz\\ClothesAz\\ClothesAz.API\\Controllers\\AiController.cs",
+              "RelativeDocumentMoniker": "ClothesAz.API\\Controllers\\AiController.cs",
+              "ToolTip": "C:\\Users\\USER\\Desktop\\ClothesAz\\ClothesAz\\ClothesAz.API\\Controllers\\AiController.cs",
+              "RelativeToolTip": "ClothesAz.API\\Controllers\\AiController.cs",
+              "ViewState": "AgIAABIAAAAAAAAAAAAAADEAAAAFAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-05-11T16:38:08.326Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "app.css",
+              "DocumentMoniker": "C:\\Users\\USER\\Desktop\\ClothesAz\\ClothesAz\\ClothesAz.Web\\wwwroot\\app.css",
+              "RelativeDocumentMoniker": "ClothesAz.Web\\wwwroot\\app.css",
+              "ToolTip": "C:\\Users\\USER\\Desktop\\ClothesAz\\ClothesAz\\ClothesAz.Web\\wwwroot\\app.css",
+              "RelativeToolTip": "ClothesAz.Web\\wwwroot\\app.css",
+              "ViewState": "AgIAAOoBAAAAAAAAAAAmwAICAAAwAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003000|",
+              "WhenOpened": "2026-05-11T15:03:07.733Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 8,
+              "Title": "JsonDatabaseService.cs",
+              "DocumentMoniker": "C:\\Users\\USER\\Desktop\\ClothesAz\\ClothesAz\\ClothesAz.API\\Data\\JsonDatabaseService.cs",
+              "RelativeDocumentMoniker": "ClothesAz.API\\Data\\JsonDatabaseService.cs",
+              "ToolTip": "C:\\Users\\USER\\Desktop\\ClothesAz\\ClothesAz\\ClothesAz.API\\Data\\JsonDatabaseService.cs",
+              "RelativeToolTip": "ClothesAz.API\\Data\\JsonDatabaseService.cs",
+              "ViewState": "AgIAALYAAAAAAAAAAAAAANUAAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-05-11T17:07:27.062Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 9,
+              "Title": "AiRequest.cs",
+              "DocumentMoniker": "C:\\Users\\USER\\Desktop\\ClothesAz\\ClothesAz\\ClothesAz.API\\DTOs\\AiRequest.cs",
+              "RelativeDocumentMoniker": "ClothesAz.API\\DTOs\\AiRequest.cs",
+              "ToolTip": "C:\\Users\\USER\\Desktop\\ClothesAz\\ClothesAz\\ClothesAz.API\\DTOs\\AiRequest.cs",
+              "RelativeToolTip": "ClothesAz.API\\DTOs\\AiRequest.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAcAAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-05-11T16:41:47.957Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 10,
+              "Title": "Catalog.razor",
+              "DocumentMoniker": "C:\\Users\\USER\\Desktop\\ClothesAz\\ClothesAz\\ClothesAz.Web\\Pages\\Catalog.razor",
+              "RelativeDocumentMoniker": "ClothesAz.Web\\Pages\\Catalog.razor",
+              "ToolTip": "C:\\Users\\USER\\Desktop\\ClothesAz\\ClothesAz\\ClothesAz.Web\\Pages\\Catalog.razor",
+              "RelativeToolTip": "ClothesAz.Web\\Pages\\Catalog.razor",
+              "ViewState": "AgIAABUAAAAAAAAAAAAAAC4AAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2026-05-11T14:13:32.469Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 11,
+              "Title": "MainLayout.razor",
+              "DocumentMoniker": "C:\\Users\\USER\\Desktop\\ClothesAz\\ClothesAz\\ClothesAz.Web\\Layout\\MainLayout.razor",
+              "RelativeDocumentMoniker": "ClothesAz.Web\\Layout\\MainLayout.razor",
+              "ToolTip": "C:\\Users\\USER\\Desktop\\ClothesAz\\ClothesAz\\ClothesAz.Web\\Layout\\MainLayout.razor",
+              "RelativeToolTip": "ClothesAz.Web\\Layout\\MainLayout.razor",
+              "ViewState": "AgIAABsAAAAAAAAAAAAhwCsAAAA0AAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2026-05-11T14:06:47.713Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "Program.cs",
+              "DocumentMoniker": "C:\\Users\\USER\\Desktop\\ClothesAz\\ClothesAz\\ClothesAz.Web\\Program.cs",
+              "RelativeDocumentMoniker": "ClothesAz.Web\\Program.cs",
+              "ToolTip": "C:\\Users\\USER\\Desktop\\ClothesAz\\ClothesAz\\ClothesAz.Web\\Program.cs",
+              "RelativeToolTip": "ClothesAz.Web\\Program.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAACQAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-05-11T14:08:51.391Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "Cabinet.razor",
+              "DocumentMoniker": "C:\\Users\\USER\\Desktop\\ClothesAz\\ClothesAz\\ClothesAz.Web\\Pages\\Cabinet.razor",
+              "RelativeDocumentMoniker": "ClothesAz.Web\\Pages\\Cabinet.razor",
+              "ToolTip": "C:\\Users\\USER\\Desktop\\ClothesAz\\ClothesAz\\ClothesAz.Web\\Pages\\Cabinet.razor",
+              "RelativeToolTip": "ClothesAz.Web\\Pages\\Cabinet.razor",
+              "ViewState": "AgIAACoAAAAAAAAAAAAAACEAAAAVAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2026-05-11T14:17:46.531Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "Home.razor",
+              "DocumentMoniker": "C:\\Users\\USER\\Desktop\\ClothesAz\\ClothesAz\\ClothesAz.Web\\Pages\\Home.razor",
+              "RelativeDocumentMoniker": "ClothesAz.Web\\Pages\\Home.razor",
+              "ToolTip": "C:\\Users\\USER\\Desktop\\ClothesAz\\ClothesAz\\ClothesAz.Web\\Pages\\Home.razor",
+              "RelativeToolTip": "ClothesAz.Web\\Pages\\Home.razor",
+              "ViewState": "AgIAABUAAAAAAAAAAAAAACsAAAAJAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2026-05-11T15:51:19.278Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
+              "Title": "ProductCard.razor",
+              "DocumentMoniker": "C:\\Users\\USER\\Desktop\\ClothesAz\\ClothesAz\\ClothesAz.Web\\Shared\\ProductCard.razor",
+              "RelativeDocumentMoniker": "ClothesAz.Web\\Shared\\ProductCard.razor",
+              "ToolTip": "C:\\Users\\USER\\Desktop\\ClothesAz\\ClothesAz\\ClothesAz.Web\\Shared\\ProductCard.razor",
+              "RelativeToolTip": "ClothesAz.Web\\Shared\\ProductCard.razor",
+              "ViewState": "AgIAAMYAAAAAAAAAAAAAAOUAAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2026-05-11T14:23:25.592Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "ClientModels.cs",
+              "DocumentMoniker": "C:\\Users\\USER\\Desktop\\ClothesAz\\ClothesAz\\ClothesAz.Web\\Services\\ClientModels.cs",
+              "RelativeDocumentMoniker": "ClothesAz.Web\\Services\\ClientModels.cs",
+              "ToolTip": "C:\\Users\\USER\\Desktop\\ClothesAz\\ClothesAz\\ClothesAz.Web\\Services\\ClientModels.cs",
+              "RelativeToolTip": "ClothesAz.Web\\Services\\ClientModels.cs",
+              "ViewState": "AgIAAHYAAAAAAAAAAAAYwIAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-05-11T16:05:07.749Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 13,
+              "Title": "database.json",
+              "DocumentMoniker": "C:\\Users\\USER\\Desktop\\ClothesAz\\ClothesAz\\ClothesAz.API\\Data\\database.json",
+              "RelativeDocumentMoniker": "ClothesAz.API\\Data\\database.json",
+              "ToolTip": "C:\\Users\\USER\\Desktop\\ClothesAz\\ClothesAz\\ClothesAz.API\\Data\\database.json",
+              "RelativeToolTip": "ClothesAz.API\\Data\\database.json",
+              "ViewState": "AgIAAL8AAAAAAAAAAAAAALYAAAAUAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
+              "WhenOpened": "2026-05-11T15:59:16.562Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 12,
+              "Title": "_Imports.razor",
+              "DocumentMoniker": "C:\\Users\\USER\\Desktop\\ClothesAz\\ClothesAz\\ClothesAz.Web\\_Imports.razor",
+              "RelativeDocumentMoniker": "ClothesAz.Web\\_Imports.razor",
+              "ToolTip": "C:\\Users\\USER\\Desktop\\ClothesAz\\ClothesAz\\ClothesAz.Web\\_Imports.razor",
+              "RelativeToolTip": "ClothesAz.Web\\_Imports.razor",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAoAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2026-05-11T16:20:00.098Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 15,
+              "Title": "CartService.cs",
+              "DocumentMoniker": "C:\\Users\\USER\\Desktop\\ClothesAz\\ClothesAz\\ClothesAz.Web\\Services\\CartService.cs",
+              "RelativeDocumentMoniker": "ClothesAz.Web\\Services\\CartService.cs",
+              "ToolTip": "C:\\Users\\USER\\Desktop\\ClothesAz\\ClothesAz\\ClothesAz.Web\\Services\\CartService.cs",
+              "RelativeToolTip": "ClothesAz.Web\\Services\\CartService.cs",
+              "ViewState": "AgIAAEsAAAAAAAAAAAAuwHMAAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-05-11T14:06:30.296Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 14,
+              "Title": "Register.razor",
+              "DocumentMoniker": "C:\\Users\\USER\\Desktop\\ClothesAz\\ClothesAz\\ClothesAz.Web\\Pages\\Register.razor",
+              "RelativeDocumentMoniker": "ClothesAz.Web\\Pages\\Register.razor",
+              "ToolTip": "C:\\Users\\USER\\Desktop\\ClothesAz\\ClothesAz\\ClothesAz.Web\\Pages\\Register.razor",
+              "RelativeToolTip": "ClothesAz.Web\\Pages\\Register.razor",
+              "ViewState": "AgIAAC0AAAAAAAAAAAAAAEAAAAAFAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2026-05-11T14:52:03.397Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 17,
+              "Title": "Login.razor",
+              "DocumentMoniker": "C:\\Users\\USER\\Desktop\\ClothesAz\\ClothesAz\\ClothesAz.Web\\Pages\\Login.razor",
+              "RelativeDocumentMoniker": "ClothesAz.Web\\Pages\\Login.razor",
+              "ToolTip": "C:\\Users\\USER\\Desktop\\ClothesAz\\ClothesAz\\ClothesAz.Web\\Pages\\Login.razor",
+              "RelativeToolTip": "ClothesAz.Web\\Pages\\Login.razor",
+              "ViewState": "AgIAAAUAAAAAAAAAAAAuwAsAAAAEAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2026-05-11T14:30:17.398Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 16,
+              "Title": "launchSettings.json",
+              "DocumentMoniker": "C:\\Users\\USER\\Desktop\\ClothesAz\\ClothesAz\\ClothesAz.Web\\Properties\\launchSettings.json",
+              "RelativeDocumentMoniker": "ClothesAz.Web\\Properties\\launchSettings.json",
+              "ToolTip": "C:\\Users\\USER\\Desktop\\ClothesAz\\ClothesAz\\ClothesAz.Web\\Properties\\launchSettings.json",
+              "RelativeToolTip": "ClothesAz.Web\\Properties\\launchSettings.json",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAswCgAAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
+              "WhenOpened": "2026-05-11T14:37:36.813Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 18,
+              "Title": "AuthService.cs",
+              "DocumentMoniker": "C:\\Users\\USER\\Desktop\\ClothesAz\\ClothesAz\\ClothesAz.Web\\Services\\AuthService.cs",
+              "RelativeDocumentMoniker": "ClothesAz.Web\\Services\\AuthService.cs",
+              "ToolTip": "C:\\Users\\USER\\Desktop\\ClothesAz\\ClothesAz\\ClothesAz.Web\\Services\\AuthService.cs",
+              "RelativeToolTip": "ClothesAz.Web\\Services\\AuthService.cs",
+              "ViewState": "AgIAADcAAAAAAAAAAAAuwF8AAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-05-11T14:16:39.316Z"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

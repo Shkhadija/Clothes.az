@@ -1,0 +1,52 @@
+﻿@page "/login"
+@inject ApiService Api
+@inject AuthService Auth
+@inject NavigationManager Nav
+
+<h1>Daxil ol</h1>
+
+<div class="cardx" style="max-width:500px">
+    <input @bind="email" placeholder="Email" />
+    <input @bind="password" type="password" placeholder="Şifrə" />
+
+    <button @onclick="LoginUser">
+        Daxil ol
+    </button>
+
+    <p style="color:red">@error</p>
+</div>
+
+@code {
+    string email = "";
+    string password = "";
+    string error = "";
+
+    async Task LoginUser()
+    {
+        error = "";
+
+        var response = await Api.PostAsync("api/Auth/login", new
+        {
+            Email = email,
+            Password = password
+        });
+
+        if (!response.IsSuccessStatusCode)
+        {
+            error = "Email və ya şifrə yanlışdır.";
+            return;
+        }
+
+        var result = await response.Content.ReadFromJsonAsync<AuthResponse>();
+
+        if (result is null)
+        {
+            error = "Login zamanı xəta baş verdi.";
+            return;
+        }
+
+        await Auth.LoginAsync(result);
+
+        Nav.NavigateTo("/home", true);
+    }
+}

@@ -1,0 +1,7 @@
+@page "/ai"
+@inject ApiService Api
+@inject AuthService Auth
+<h1>AI Stil Köməkçisi</h1>
+<div class="ai-box"><div class="chat"><div class="bot">Salam! Axtardığın geyimi yaz və ya şəkil linki əlavə et. Məsələn: “qara oversize hoodie”</div>@foreach(var m in messages){<div class="me">@m.q</div><div class="bot">@m.a</div>}</div><div class="ai-input"><input placeholder="Stil, rəng, ölçü, brend yaz..." @bind="text"/><input placeholder="Şəkil URL optional" @bind="image"/><button @onclick="Ask">Göndər</button></div></div>
+@if(results.Any()){<h2>AI uyğun məhsullar</h2><div class="product-grid">@foreach(var p in results){<ClothesAz.Web.Shared.ProductCard Product="p" />}</div>}
+@code{string text=""; string image=""; List<(string q,string a)> messages=new(); List<Product> results=new(); protected override async Task OnInitializedAsync(){await Auth.InitAsync();} async Task Ask(){if(string.IsNullOrWhiteSpace(text)&&string.IsNullOrWhiteSpace(image))return; var q=text; var r=await Api.PostAsync("api/Ai/assistant",new{UserId=Auth.UserId==0?1:Auth.UserId,Text=text,ImageUrl=image}); if(r.IsSuccessStatusCode){var res=await r.Content.ReadFromJsonAsync<AiResponse>(); messages.Add((q,res?.Answer??"Cavab tapılmadı")); results=res?.Products??new(); text=""; image="";}}}

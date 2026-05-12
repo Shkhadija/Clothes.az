@@ -1,0 +1,110 @@
+@page "/catalog"
+
+@using ClothesAz.Web.Services
+@using Microsoft.AspNetCore.Components
+
+@inject ApiService Api
+@inject NavigationManager Nav
+
+<h1>Kataloq</h1>
+
+<!-- Filterlər -->
+<div class="filters">
+    <input placeholder="Məhsul axtar..."
+           @bind="q"
+           @bind:event="oninput" />
+
+    <select @bind="cat">
+        <option value="0">Bütün kateqoriyalar</option>
+        @foreach (var c in categories)
+        {
+            <option value="@c.Id">@c.Name</option>
+        }
+    </select>
+
+    <button @onclick="LoadProducts">
+        Axtar
+    </button>
+</div>
+
+<!-- Yüklənir -->
+@if (isLoading)
+{
+    <p>Yüklənir...</p>
+}
+else if (products.Count == 0)
+{
+    <p>Heç bir məhsul tapılmadı.</p>
+}
+else
+{
+    <div class="product-grid">
+        @foreach (var p in products)
+        {
+            <ProductCard Product="p" />
+        }
+    </div>
+}
+
+@code {
+    // URL-dən gələn query parametrləri
+    [SupplyParameterFromQuery]
+    public string? Q { get; set; }
+
+    [SupplyParameterFromQuery(Name = "cat")]
+    public int CatQuery { get; set; }
+
+    // Dəyişənlər
+    private string q = "";
+    private int cat = 0;
+
+    private bool isLoading = true;
+
+    private List<Category> categories = new();
+    private List<Product> products = new();
+
+    protected override async Task OnInitializedAsync()
+    {
+        // URL parametrlərini götür
+        q = Q ?? "";
+        cat = CatQuery;
+
+        // Kateqoriyaları yüklə
+        categories =
+            await Api.GetAsync<List<Category>>("api/Marketplace/categories")
+            ?? new List<Category>();
+
+        // Məhsulları yüklə
+        await LoadProducts();
+    }
+
+    private async Task LoadProducts()
+    {
+        isLoading = true;
+
+        // API URL
+        var url = "api/Products";
+
+        // Axtarış sözü varsa
+        if (!string.IsNullOrWhiteSpace(q))
+        {
+            url += $"?q={Uri.EscapeDataString(q)}";
+        }
+
+        // Kateqoriya seçilibsə
+        if (cat > 0)
+        {
+            if (url.Contains("?"))
+                url += $"&categoryId={cat}";
+            else
+                url += $"?categoryId={cat}";
+        }
+
+        // API-dən məhsulları gətir
+        products =
+            await Api.GetAsync<List<Product>>(url)
+            ?? new List<Product>();
+
+        isLoading = false;
+    }
+}
